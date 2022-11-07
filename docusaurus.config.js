@@ -1,13 +1,13 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Archmage',
-  tagline: 'Archmage takes you into the Web3 world',
+  tagline: 'Take you into the Web3 world',
   url: 'https://archmage.live',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -20,8 +20,10 @@ const config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en']
   },
+
+  plugins: ['docusaurus-plugin-sass'],
 
   presets: [
     [
@@ -30,44 +32,59 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/archmage-live/archmage-portal/tree/main/',
+          editUrl: 'https://github.com/archmage-live/archmage-portal/tree/main/'
         },
         blog: {
           showReadingTime: true,
-          editUrl:
-            'https://github.com/archmage-live/archmage-portal/tree/main/',
+          editUrl: 'https://github.com/archmage-live/archmage-portal/tree/main/'
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
-    ],
+          customCss: require.resolve('./src/css/custom.scss')
+        }
+      })
+    ]
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
+        hideOnScroll: true,
         title: 'Archmage',
         logo: {
           alt: 'Archmage Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.svg'
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs'
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            type: 'doc',
+            docId: 'intro',
+            position: 'left',
+            label: 'API'
           },
-        ],
+          {
+            href: 'https://plugins.archmage.live',
+            position: 'left',
+            label: 'Plugins'
+          },
+          { to: '/blog', label: 'Blog', position: 'left' },
+          {
+            type: 'localeDropdown',
+            position: 'right'
+          },
+          {
+            href: 'https://github.com/archmage-live/archmage-x',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository'
+          }
+        ]
       },
       footer: {
         style: 'dark',
@@ -77,48 +94,53 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
+                to: '/docs/intro'
+              }
+            ]
           },
           {
             title: 'Community',
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus'
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discordapp.com/invite/docusaurus'
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
+                href: 'https://twitter.com/docusaurus'
+              }
+            ]
           },
           {
             title: 'More',
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: '/blog'
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
+                href: 'https://github.com/archmage-live/archmage-x'
+              }
+            ]
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Archmage, Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Archmage, Inc.`
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        darkTheme: darkCodeTheme
       },
-    }),
-};
+      algolia: {
+        appId: 'X1Z85QJPUV',
+        apiKey: 'bf7211c161e8205da2f933a02534105a',
+        indexName: 'archmage'
+      }
+    })
+}
 
-module.exports = config;
+module.exports = config
