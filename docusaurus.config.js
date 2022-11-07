@@ -31,7 +31,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.ts'),
           editUrl: 'https://github.com/archmage-live/archmage-portal/tree/main/'
         },
         blog: {
@@ -139,6 +139,12 @@ const config = {
         appId: 'X1Z85QJPUV',
         apiKey: 'bf7211c161e8205da2f933a02534105a',
         indexName: 'archmage'
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        }
       }
     })
 }
