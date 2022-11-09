@@ -87,8 +87,16 @@ const config = {
         ]
       },
       footer: {
-        style: 'dark',
+        logo: {
+          alt: 'Archmage Logo',
+          src: 'img/logo.svg',
+          href: 'https://archmage.live',
+          width: 160,
+        },
         links: [
+          {
+            title: 'Learn More',
+          },
           {
             title: 'Docs',
             items: [
