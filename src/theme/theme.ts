@@ -3,6 +3,11 @@ import {
   extendTheme,
   withDefaultColorScheme
 } from '@chakra-ui/react'
+import {
+  StyleFunctionProps,
+  mode,
+  transparentize
+} from '@chakra-ui/theme-tools'
 
 export const theme: Record<string, any> = extendTheme(
   {
@@ -13,8 +18,12 @@ export const theme: Record<string, any> = extendTheme(
     } as ThemeConfig,
     styles: {
       global: (props) => ({
-        html: {},
-        body: {}
+        html: {
+          bg: mode('white', 'gray.800')(props)
+        },
+        body: {
+          bg: mode('white', 'gray.800')(props)
+        }
       })
     }
   },

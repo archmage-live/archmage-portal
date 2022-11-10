@@ -76,6 +76,12 @@ html[data-theme='dark'] {
     no-repeat;
 }
 
+.footer {
+  &--dark {
+    --ifm-footer-background-color: var(--ifm-background-color);
+  }
+}
+
 .hero {
   &--dark {
     --ifm-hero-background-color: var(--ifm-background-surface-color);

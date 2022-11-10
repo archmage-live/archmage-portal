@@ -31,7 +31,7 @@ function Header() {
             }
           }}>
           <Heading as="h2" size="2xl">
-            The first programmable Web3 wallet
+            The open source programmable Web3 wallet
           </Heading>
           <Text fontSize="xl">
             Explore the decentralized Web3 world with ease
@@ -50,11 +50,10 @@ function Header() {
 }
 
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext()
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title="The open source programmable Web3 wallet"
+      description="The open source programmable Web3 wallet">
       {/*<Background />*/}
       {/*<HomepageHeader />*/}
       <Header />
