@@ -19,6 +19,6 @@ export const theme: Record<string, any> = extendTheme(
     }
   },
   withDefaultColorScheme({
-    colorScheme: 'blue'
+    colorScheme: 'purple'
   })
 )

@@ -79,7 +79,7 @@ const config = {
             position: 'right'
           },
           {
-            href: 'https://github.com/archmage-live/archmage-x',
+            href: 'https://github.com/archmage-live',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository'
@@ -132,7 +132,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/archmage-live/archmage-x'
+                href: 'https://github.com/archmage-live'
               }
             ]
           }
